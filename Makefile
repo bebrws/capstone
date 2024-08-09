@@ -214,7 +214,7 @@ DEP_X86 += $(wildcard arch/X86/X86*.inc)
 
 LIBOBJ_X86 =
 ifneq (,$(findstring x86,$(CAPSTONE_ARCHS)))
-	CFLAGS += -DCAPSTONE_HAS_X86
+# CFLAGS += -DCAPSTONE_HAS_X86
 	LIBOBJ_X86 += $(OBJDIR)/arch/X86/X86DisassemblerDecoder.o
 	LIBOBJ_X86 += $(OBJDIR)/arch/X86/X86Disassembler.o
 	LIBOBJ_X86 += $(OBJDIR)/arch/X86/X86InstPrinterCommon.o
