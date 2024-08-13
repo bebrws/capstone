@@ -524,7 +524,7 @@ AUTODEPS:= $(patsubst %.o,%.d, $(LIBOBJ))
 # include by auto dependencies
 -include $(AUTODEPS)
 
-install: $(PKGCFGF) $(ARCHIVE) $(LIBRARY)
+install: $(PKGCFGF)  $(LIBRARY)
 	mkdir -p $(LIBDIR)
 	$(call install-library,$(LIBDIR))
 ifeq ($(CAPSTONE_STATIC),yes)
